@@ -9,7 +9,7 @@ name: X64-My-OpenWrt-CI
 
 on:
   schedule:
-    - cron: 300 * * * *
+    - cron: * 3 * * *
   push:
     branches: 
       - master
