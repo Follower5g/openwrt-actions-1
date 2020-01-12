@@ -45,6 +45,11 @@ jobs:
           rm -f .config
           cp ../my-1907-x64 .config
 
+    - name: Costom configure IP
+      run: |
+          cd openwrt
+          sed -i_orig 's/ipad=${ipaddr:-"192.168.1.1"}/ipad=${ipaddr:-"10.10.10.254"}/g' package/base-files/files/bin/config_generate
+
     - name: Make download
       run: |
           cd openwrt
